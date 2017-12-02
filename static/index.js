@@ -1,3 +1,5 @@
+var ERROR_COUNT = 0
+var ERROR_NUM =  document.getElementsByClassName("bug-num")[0];
 //Sentry
 Raven.config('https://b2a850da2e9c4ec0af5ea60c4faecbe4@sentry.io/253513').install()
 Raven.context(function () {
@@ -12,32 +14,20 @@ function throwUIError() {
       throw "CARD ERROR :P";
   }
 
-
+function update_error_count(){
+    ERROR_COUNT += 1;
+    ERROR_NUM.innerHTML = ERROR_COUNT;
+}
 function initMyApp(){
-    try {
-        throwUIError();
-    } catch(e) {
-        Raven.captureException(e)
-    }
-
-    var error_cards = document.getElementsByClassName("card");
+    var error_cards = document.getElementsByClassName("error-btn");
     try {
         error_cards[0].addEventListener('click', function (event) {
-            throwCardError();
-        });
-        error_cards[1].addEventListener('click', function (event) {
-            throwCardError();
-        });
-        error_cards[2].addEventListener('click', function (event) {
-            throwCardError();
-        });
-        error_cards[3].addEventListener('click', function (event) {
-            throwCardError();
+            update_error_count();
+            console.log(ERROR_COUNT);
+            throwUIError();
         });
     } catch(e) {
-        Raven.captureException(e)
+        Raven.captureException(e);
     }
-    
-    console.log("fin");
 }
 

@@ -4,7 +4,7 @@
         <!-- Bootstrap -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
         
-        <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Comfortaa|Righteous" rel="stylesheet">
         <link rel="stylesheet" href="/static/index.css">
         
         
@@ -14,53 +14,21 @@
     </head>
     <body>
 
-        <div class="container-fluid, body">
+        <div class="container-fluid body">
             <!-- Navigation -->
-            <div class="row">
-                <nav class="navbar navbar-light bg-light navbar-expand-lg justify-content-center">
-                    <span class="navbar-brand mb-0 h1">Sentry Flask</span>
-                </nav>
+            <div class="row justify-content-center">
+                    <h1>Sentry Flask</h1>         
             </div>
-
+            <hr>
+            <div class="row justify-content-center bug-message">
+                <h3>You have sent <br><span class="bug-num">0</span><br>bugs.</h3>
+            </div>
             
-            <div class="container-fluid body">
+            <div class="container-fluid">
                 <div class="row align-items-center body justify-content-center">
-                    <div class="col">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="card-title">
-                                    Cause Error 1
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="card-title">
-                                    Cause Error 1
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="card-title">
-                                    Cause Error 1
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="card-title">
-                                    Cause Error 1
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <button type="button" class="btn btn-primary btn-lg error-btn">
+                        Silly UI Error
+                    </button>
                 </div>
             </div>
 

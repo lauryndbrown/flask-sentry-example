@@ -1,11 +1,63 @@
+/*
+Color scheme can be found here: https://coolors.co/fffbfc-ff964c-ffc259-232528-6a6af2
+*/
+
 body, html, .body {
     height:100% !important;
     min-height: 100%;
-    background-color: #FFF;
+    background-color: #232528;
     font-family: 'Comfortaa', cursive;
+    color:#fffbfc;
+}
+.bug-message{
+    margin: 10% 0;
+}
+.error-btn{
+    background-color: #ff964c;
+    border: solid 1em #ff964c;
+    color:#fffbfc;
+    
+}
+.error-btn:hover, .error-btn:focus, .error-btn:active, .error-btn.active, .open>.dropdown-toggle.error-btn {
+    background-color: #d0783e !important;
+    border: solid 1em #d0783e !important;
+    color:#fffbfc !important;   
 }
 
-.card{
-    background-color: #6a6af2;
-    color:#fffbfc;
+.error-btn:active:focus, .error-btn:active {
+    background-color: #d0783e !important;
+    border: solid 1em #d0783e !important;
+    color:#fffbfc !important;
+    outline: none !important;  
+  }
+h2, h3{
+    text-align: center;
+}
+h1{
+    margin-top:.10em;
+    font-size: 4em;  
+   /* text-shadow: #6a6af2 3px 2px 0; */
+}
+h1, .error-btn{
+    color: #fffbfc;
+    text-transform: uppercase;
+    font-family: 'Righteous', cursive;
+}
+h3{
+    font-size: 3em;
+}
+
+hr { 
+    border: 0; 
+    height: 1px; 
+    background-image: -webkit-linear-gradient(left, #ff964c, #6a6af2, #ff964c);
+    background-image: -moz-linear-gradient(left, #ff964c, #6a6af2, #ff964c);
+    background-image: -ms-linear-gradient(left, #ff964c, #6a6af2, #ff964c);
+    background-image: -o-linear-gradient(left, #ff964c, #6a6af2, #ff964c); 
+  }
+  
+
+.bug-num{
+    font-size: 4em;
+    color:#6a6af2;
 }

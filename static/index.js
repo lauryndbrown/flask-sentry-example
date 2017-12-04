@@ -8,22 +8,22 @@ Raven.context(function () {
 
 function throwUIError() {
     throw "I'm a UI Error! ^.^ ";
-  }
+}
 
-  function throwCardError(){
+function throwCardError(){
       throw "CARD ERROR :P";
-  }
+}
 
 function update_error_count(){
     ERROR_COUNT += 1;
     ERROR_NUM.innerHTML = ERROR_COUNT;
 }
+
 function initMyApp(){
     var error_cards = document.getElementsByClassName("error-btn");
     try {
         error_cards[0].addEventListener('click', function (event) {
             update_error_count();
-            console.log(ERROR_COUNT);
             throwUIError();
         });
     } catch(e) {
